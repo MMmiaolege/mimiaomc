@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>喵</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -26,7 +28,7 @@
                 <h2 class="blue-text text-darken-4">我叫 MM 喵了个</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="mdui-prose">
             <div class="col s12 center">
                 <div class="card-panel">
                     <p>这是主站啦~</p> 
@@ -57,12 +59,16 @@
             </div>
         </div>
     </div>
-        <p>　</p>
     <div style=" float:right; background:blanchedalmond;">
-    <select onchange="window.open(this.options[this.selectedIndex].value)" id="select">
-        <option selected="selected">中文（中国）</option>
-        <option value="/en-US/index.html">English (United States)</option>
-    </select>
+<mdui-dropdown placement="auto">
+    <mdui-button icon="language" slot="trigger">中文（中国）</mdui-button>
+    <mdui-menu>
+        <mdui-menu-item href="/en-US/index.html">United States - English</mdui-menu-item>
+        <mdui-menu-item disabled href="/zh-HK/index.html">繁體中文 (香港特別行政区)</mdui-menu-item>
+        <mdui-menu-item disabled href="/zh-TW/index.html">繁體中文 (台灣)</mdui-menu-item>
+        <mdui-menu-item disabled href="/ja-JP/index.html">日本 - 日本語</mdui-menu-item>
+    </mdui-menu>
+  </mdui-dropdown>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
