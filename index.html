@@ -1,29 +1,39 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>喵</title>
 </head>
+
 <body>
-    <script>    
+    <script>
         !function () {
             function toLowerCase(str) {
-        return str.toLowerCase();
-    }
-            var lang = navigator.language||navigator.userLanguage;
-             lang = lang.substr(0, 2);
-             lang = toLowerCase(lang.substr(0, 2));
-
-            if(lang == 'zh'){
-                 window.location.replace('/zh-CN/index.html')//简体中文链接
-            } else if(lang == 'zh-HK'){
-                window.location.replace('/zh-HK/index.html')//繁体中文（香港特别行政区）链接
-            }else{
-                window.location.replace('/en-US/index.html')//英文链接
+                return str.toLowerCase();
             }
+            var lang = navigator.language || navigator.userLanguage;
+            lang = lang.substr(0, 2);
+            lang = toLowerCase(lang.substr(0, 2));
+
+            if (lang == 'zh') {
+                window.location.replace('/zh-CN/index.html')//简体中文链接
+            } else if (lang == 'zh-hk') {
+                window.location.replace('/zh-HK/index.html')//繁体中文（香港特别行政区）链接
+            } else if (lang == 'en-us') {
+                window.location.replace('/en-US/index.html')//英文链接
+            } else {
+                window.location.replace('/zh-Yue/index.html')//粵語链接
+            }
+
+        }
         }()
     </script>
-    <p>Make sure your browser supports JavaScript, or go to <a href="https://mimiaomc.top/en-US/index.html">https://mimiaomc.top/en-US/index.html</a> . </p>
-    <p>请确认浏览器支持 JavaScript ，或转到 <a href="https://mimiaomc.top/zh-CN/index.html">https://mimiaomc.top/zh-CN/index.html</a> 。</p>
-    <p>請確認瀏覽器支持 JavaScript ，或轉到 <a href="https://mimiaomc.top/zh-HK/index.html">https://mimiaomc.top/zh-HK/index.html</a> 。</p>
+    <p>Make sure your browser supports JavaScript, or go to <a
+            href="https://mimiaomc.top/en-US/index.html">https://mimiaomc.top/en-US/index.html</a> . </p>
+    <p>请确认浏览器支持 JavaScript ，或转到 <a
+            href="https://mimiaomc.top/zh-CN/index.html">https://mimiaomc.top/zh-CN/index.html</a> 。</p>
+    <p>請確認瀏覽器支持 JavaScript ，或轉到 <a
+            href="https://mimiaomc.top/zh-HK/index.html">https://mimiaomc.top/zh-HK/index.html</a> 。</p>
 </body>
+
 </html>
