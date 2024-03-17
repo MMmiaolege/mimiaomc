@@ -6,8 +6,13 @@
 <body>
     <script>    
         !function () {
-        var lang = navigator.language||navigator.userLanguage;
+            function toLowerCase(str) {
+        return str.toLowerCase();
+    }
+            var lang = navigator.language||navigator.userLanguage;
              lang = lang.substr(0, 2);
+             lang = toLowerCase(lang.substr(0, 2));
+
             if(lang == 'zh'){
                  window.location.replace('/zh-CN/index.html')//简体中文链接
             } else if(lang == 'zh-HK'){
